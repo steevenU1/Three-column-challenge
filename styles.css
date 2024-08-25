@@ -1,0 +1,125 @@
+:root{
+    --sedans-color: #E28625;
+    --suv-color: #006971;
+    --luxury-color: #004140;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+}
+
+body{
+    height: 100%;
+    background-color: #F2F2F2;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    height: auto;
+    margin: calc(10%) auto;
+    margin-bottom: 2px;
+}
+
+.cars-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: left;
+    padding: 45px;
+}
+
+.cars-card__sedans{
+    background-color: var(--sedans-color);
+    border-radius: 8px 0 0 8px;
+}
+
+.cars-card__SUVs{
+    background-color: var(--suv-color);
+}
+
+.cars-card__luxury{
+    background-color: var(--luxury-color);
+    border-radius: 0 8px 8px 0;
+}
+
+.cars-card__icon{
+    margin-bottom: 25px;
+}
+
+.cars-card__title h1{
+    font-size: 4rem;
+    margin-bottom: 25px;
+}
+
+
+.cars-card__info p{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-bottom: 45px;
+}
+
+.cars-card__button button{
+    background-color: white;
+    border-radius: 50px;
+    width: 145px;
+    height: 50px;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cars-card__button button:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.sedans-button{
+    color: var(--sedans-color);
+}
+
+.SUV-button{
+    color: var(--suv-color);
+}
+
+.luxury-button{
+    color: var(--luxury-color);
+}
+
+@media (max-width: 375px){
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        max-width: 375px;
+        min-width: 320px;
+        margin: 0;
+        
+    }
+    .cars-card{
+        width: 100%;
+    }
+    .cars-card__sedans{
+        border-radius: 0;
+    }    
+    .cars-card__luxury{
+        border-radius: 0 ;
+    }
+}
